@@ -17,7 +17,7 @@ const mouse = {
 canvas.addEventListener('click' , function(event){
   mouse.x = event.x;
   mouse.y = event.y;
-  for(let i =0; i < 10; i++){
+  for(let i =0; i < 10; i++){//동그라미 집합의 폭
     particlesArray.push(new Particle());
   }
   
@@ -26,7 +26,7 @@ canvas.addEventListener('click' , function(event){
 canvas.addEventListener('mousemove', function(event){
   mouse.x = event.x;
   mouse.y = event.y;
-  for(let i =0; i < 2; i++){
+  for(let i =0; i < 2; i++){//동그라미가 생성되는 속도(작을수록 빠르게 흩어지고 클수록 느리게 흩어짐)
     particlesArray.push(new Particle());
   }
 })
@@ -36,10 +36,10 @@ class Particle{
   constructor(){
     this.x = mouse.x;
     this.y = mouse.y;
-    this.size = Math.random() * 30 + 1;
+    this.size = Math.random() * 23+ 1;//동그라미 크기
     this.speedX = Math.random() * 3 - 1.5;
     this.speedY = Math.random() * 3 - 1.5;
-    this.color = 'hsl(' + hue +', 100%, 50%)';
+    this.color = 'hsl(' + hue +', 100%, 50%)';//동그라미색상
   }
   update(){
     this.x += this.speedX;
@@ -47,7 +47,7 @@ class Particle{
     if(this.size > 0.1) this.size -= 0.1;
   }
   draw(){
-    ctx.fillStyle = this.color;
+    ctx.fillStyle = this.color;//동그라미 색상
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fill();
@@ -65,7 +65,7 @@ function handleParticles(){
       if (distance < 100){
         ctx.beginPath();
         ctx.strokeStyle = particlesArray[i].color;
-        ctx.lineWidth = 0.5;
+        ctx.lineWidth = 0.5;//라인 두께
         ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
         ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
         ctx.stroke();
