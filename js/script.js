@@ -24,6 +24,7 @@ canvas.addEventListener('click' , function(event){
 });
 
 canvas.addEventListener('mousemove', function(event){
+  //마우스 좌표
   mouse.x = event.x;
   mouse.y = event.y;
   for(let i =0; i < 2; i++){//동그라미가 생성되는 속도(작을수록 빠르게 흩어지고 클수록 느리게 흩어짐)
@@ -36,7 +37,7 @@ class Particle{
   constructor(){
     this.x = mouse.x;
     this.y = mouse.y;
-    this.size = Math.random() * 23+ 1;//동그라미 크기
+    this.size = Math.random() * 23 + 1;//동그라미 크기
     this.speedX = Math.random() * 3 - 1.5;
     this.speedY = Math.random() * 3 - 1.5;
     this.color = 'hsl(' + hue +', 100%, 50%)';//동그라미색상
@@ -54,7 +55,7 @@ class Particle{
   }
 }
 
-function handleParticles(){
+function handleParticles(){ //마우스 움직일때 나타나는 파티클
   for (let i = 0; i < particlesArray.length; i++){
     particlesArray[i].update();
     particlesArray[i].draw();
