@@ -3,7 +3,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particlesArray = [];
-let hue = 0;
+let hue = 0; // 색상변수
 
 window.addEventListener('resize',function(){
   canvas.width = window.innerWidth;
@@ -84,7 +84,7 @@ function handleParticles(){ //마우스 움직일때 나타나는 파티클
 function animate(){
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   handleParticles();
-  hue+=0.5;
+  hue+=0.5;//hue동그라미 기준으로 0.5씩 이동(클릭이나 이동시 색상이 변경됨)
   requestAnimationFrame(animate);
 }
 animate();
