@@ -1,0 +1,141 @@
+body{
+  scroll-behavior: smooth;
+}
+section{
+  height: 1080px;
+}
+#header{
+  width: 100%;
+  height: 70px;
+  background-color: var(--cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+}
+.header-cate{
+  width: 1000px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+.header-cate a{
+  color: var(--gray-light);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 18px 0px;
+  border-bottom: 4px solid var(--cyan);
+}
+.header-cate a:hover{
+  color: white;
+  border-bottom: 4px solid var(--teal);
+}
+article{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#profile-body h1{
+  margin-top: 115px;
+  margin-bottom: 580px;
+  font-size: 50px;
+  font-weight: 700;
+}
+#profile{
+  width: 524px;
+  height: 524px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 220px;
+}
+#profile img{
+  width: 746px;
+  height: 524px;
+}
+#color{
+  position: absolute;
+  opacity: 0;
+}
+#color:hover{
+  opacity: 1;
+  transition: all ease-in-out 500ms;
+  cursor: pointer;
+}
+#click-profile{
+  margin: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation-name: blink;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#profile-body p{
+  margin-top: 15px;
+  text-align: center;
+}
+
+#section2{
+  padding-top: 160px;
+}
+#skills h2{
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+#skills h4{
+  color: var(--gray);
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+#skills i{
+  color: var(--gray);
+}
+#publishing{
+  margin-top: 90px;
+  width: 770px;
+  display: flex;
+  justify-content: space-between;
+}
+#publishing img{
+  text-align: center;
+  height: 153px;
+  margin-bottom: 45px;
+}
+#publishing p{
+  text-align: center;
+}
+
+#frontend{
+  margin-top: 40px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+#frontend img{
+  text-align: center;
+  height: 153px;
+  margin-bottom: 45px;
+}
+#frontend p{
+  text-align: center;
+}

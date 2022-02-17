@@ -1,0 +1,91 @@
+*
+{font-family: 'Noto Sans KR', sans-serif;}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  /* reset css */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button,
+  input,
+  textarea {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+  }
+  
+  button:focus,
+  button:active,
+  input:focus,
+  input:active,
+  textarea:focus,
+  textarea:active {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  ul,
+  ol,
+  li {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2b292d;
+    letter-spacing: -0.01em;
+  }
+  
+
+:root {
+    --blue_1: #3593D3;
+    --blue_2: #004D8C;
+    --blue_3: #609AE9;
+    --blue_4: #467DC6;
+    --blue_5: #496FA0;
+    --blue_6: #2B3240;
+    --blue_7: #9ABAEC;
+    --blue_8: #185F8E;
+    --indigo: #6052EE;
+    --purple: #9A52EE;
+    --pink: pink;
+    --red: #EC4E60;
+    --orange: #FFA251;
+    --yellow: #FBD426;
+    --green: #18BB5F;
+    --teal: #95ebd0;
+    --cyan: #18BBB8;
+    --deep-cyan: #2A9CD3;
+    --white: #fff;
+    --gray: #6B727F;
+    --gray-dark: #313338;
+    --gray-light: #f2f3f7;
+    --primary: #609AE9;
+    --secondary: #467DC6;
+    --thirdary: #496FA0;
+    --tc: #2A9CD3;
+    --success: #18BBB8;
+    --info: #609AE9;
+    --warning: #FFA251;
+    --danger: #EC4E60;
+    --light: #90929E;
+    --dark: #313338;
+    --neutral: #fff;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;}
