@@ -21,18 +21,25 @@ section{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  
 }
 .header-cate a{
   color: var(--gray-light);
   font-size: 20px;
   font-weight: 600;
-  padding: 18px 0px;
-  border-bottom: 4px solid var(--cyan);
+  padding: 16px 0px;
 }
 .header-cate a:hover{
   color: white;
-  border-bottom: 4px solid var(--teal);
+}
+#horizontal-underline{
+  position: absolute;
+  left:0;
+  height: 4px;
+  width: 0;
+  border-radius: 3px;
+  transition: 0.5s;
+  background-color: var(--teal);
+  top:0;
 }
 article{
   width: 100%;
@@ -138,4 +145,85 @@ article{
 }
 #frontend p{
   text-align: center;
+}
+.skill-box{
+  padding: 20px;
+  border: 1px solid var(--white);
+  top: 0px;
+  position: relative;
+}
+.skill-box:hover{
+  padding: 20px;
+  /* border: 1px solid var(--gray-light); */
+  border-radius: 20px;
+  top: -5px;
+  position: relative;
+  box-shadow: 10px 8px 5px var(--gray-light);
+  transition: all ease-in-out 300ms;
+}
+
+/* clone-coding */
+#cards{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.thecard{
+  position: absolute;
+  width: 485px;
+  height: 689px;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+.thecard:hover{
+  transform: rotateY(180deg);
+}
+
+.thefront{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: aquamarine;
+  color: #333;
+  display:flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 38px 30px;
+}
+.thefront h1{
+  font-weight: 300;
+}
+.card-header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.profile-img{
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+.main-img{
+  size: 422px;
+  height: 438px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.theback{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: pink;
+  color: #333;
+  transform: rotateY(180deg);
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }

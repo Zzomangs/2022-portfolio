@@ -8,18 +8,20 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/intro.css">
   <script src="https://kit.fontawesome.com/eb78802e54.js" crossorigin="anonymous"></script>
+  <!-- <script src="js/header_underbar.js"></script> -->
   <title>Yeye's Portfolio</title>
 </head>
 
 <body>
   <header>
     <article id="header">
-      <div class="header-cate">
+      <nav class="header-cate">
+        <div id="horizontal-underline"></div>
         <a href="#section1">&#60;header&#47;&gt;</a>
         <a href="#section2">&#60;body&#47;&gt;</a>
-        <a href="#">&#60;article&#47;&gt;</a>
+        <a href="#section3">&#60;article&#47;&gt;</a>
         <a href="#">&#60;footer&#47;&gt;</a>
-      </div>
+      </nav>
     </article>
   </header>
   <section id="section1">
@@ -44,43 +46,41 @@
       <h4>I have this skills</h4>
       <i class="fas fa-angle-down"></i>
       <div id="publishing">
-        <div>
+        <div class="skill-box">
           <img src="img/512px-HTML5_logo_and_wordmark.svg.png" alt="">
           <p>마크업, 페이지 구조화,<br>
             테이블 등</p>
         </div>
-        <div>
+        <div class="skill-box">
           <img src="img/CSS3_logo_and_wordmark.svg.png" alt="">
           <p>정적인 요소,<br>
             기초 스타일링 등</p>
         </div>
-        <div>
+        <div class="skill-box">
           <div style="display: flex; justify-content: center;">
-          <img src="img/640px-Javascript-shield.svg.png" alt="">
+            <img src="img/640px-Javascript-shield.svg.png" alt="">
           </div>
           <p>html,css의 요소 보충,<br>
             브라우저 조작 등</p>
         </div>
       </div>
       <div id="frontend">
-        <div>
+        <div class="skill-box">
           <img src="img/2541853857EA02BC16.gif" alt="">
           <p>다양한 애니메이션 연출,<br>
             탐색,조작,이벤트 등 연출.</p>
         </div>
-        <div>
+        <div class="skill-box">
           <img src="img/1200px-Node.js_logo.svg.png" alt="">
           <p>브라우저 조작, 서버 조작</p>
         </div>
-        <div>
-          
+        <div class="skill-box">
           <img src="img/111111111.png" alt="">
-          
           <p>프로젝트 코드관리,<br>
             팀원간의 Collaboration<br>
             Branch 사용</p>
         </div>
-        <div>
+        <div class="skill-box">
           <div style="display: flex; justify-content: center;">
             <img src="img/sourcetree-1.svg" alt="">
           </div>
@@ -91,7 +91,41 @@
       </div>
     </article>
   </section>
+  <section id="section3">
+    <article id="cards">
+      <div class="thecard">
+        <div class="thefront">
+          <div class="card-header">
+            <div class="profile-img">
+              <img src="img/main.jpg" alt="">
+            </div>
+            <h1>Paradise Hotel Busan</h1>
+          </div>
+          <div class="main-img">
+            <img src="img/1630029420461.jpg" alt="">
+          </div>
+        </div>
+        <div class="theback">back</div>
+      </div>
+    </article>
+  </section>
   <footer></footer>
+  <script>
+    let horizontalBar = document.getElementById("horizontal-underline");
+let horizontalMenus = document.querySelectorAll("nav:first-child a");
+
+function horizontalIndicator(e) {
+  horizontalBar.style.left = e.offsetLeft + "px";
+  horizontalBar.style.width = e.offsetWidth + "px";
+  horizontalBar.style.top = e.offsetTop + e.offsetHeight + "px";
+}
+
+horizontalMenus.forEach((menu) =>
+  menu.addEventListener("click", (e) =>
+    horizontalIndicator(e.currentTarget)
+  )
+);
+  </script>
 </body>
 
 </html>
