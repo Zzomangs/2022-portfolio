@@ -781,6 +781,8 @@ z-index: 60;
     display: flex;
     width: 110px;
     margin-right: 8px;
+    height: 32px;
+    width: 32px;
   }
   .right-icons{
     display: flex;
