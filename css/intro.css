@@ -747,9 +747,7 @@ z-index: 60;
     flex-direction: column;
     padding: 38px 30px;
   }
-  .thefront:hover{
-    display: none;
-  }
+ 
   .thefront h1{
     font-weight: 300;
   }
